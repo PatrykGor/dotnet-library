@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Biblioteka";
+}
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-4">
+        <a asp-controller="Home" asp-action="Book" asp-route-search="false" class="btn btn-success">Dodaj</a>
+        <a asp-controller="Home" asp-action="Book" asp-route-search="true" class="btn btn-info">Znajdź</a>
+        <a asp-controller="Home" asp-action="Library"class="btn btn-link">Wyczyść wyszukiwanie</a>
+    </div>
+    <table class="w-100">
+        <thead>
+            <th>Id</th>
+            <th>Autor</th>
+            <th>Tytuł</th>
+            <th>Rok wydania</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            @{
+                if(ViewBag.Books != null) {
+                    foreach (var book in ViewBag.Books)
+                    {
+                        <tr>
+                            <td>@book.Id</td>
+                            <td>@book.Author</td>
+                            <td>@book.Title</td>
+                            <td>@book.Year</td>
+                            <td><a asp-controller="Home" asp-action="Book" asp-route-id="@book.Id" class="btn btn-warning">Edytuj</a></td>
+                            <td><a asp-controller="Books" asp-action="Remove" asp-route-id="@book.Id" class="btn btn-danger">Usuń</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>
