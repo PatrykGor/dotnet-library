@@ -14,7 +14,7 @@ ViewData["Title"] = "Książka";
             <input type="text" class="form-control" id="Author" name="Author" placeholder="Autor" value="@ViewData["Author"]">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" id="Year" name="Year" placeholder="Rok wydania" value="@ViewData["Year"]">
+            <input type="date" class="form-control" id="PublishingDate" name="PublishingDate" placeholder="Data wydania" value="@ViewData["Date"]">
         </div>
         @if (ViewData["Error"] != null)
         {

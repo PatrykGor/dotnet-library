@@ -10,9 +10,9 @@
     <table class="w-100">
         <thead>
             <th>Id</th>
-            <th>Autor</th>
             <th>Tytuł</th>
-            <th>Rok wydania</th>
+            <th>Autor</th>
+            <th>Data wydania</th>
             <th></th>
             <th></th>
         </thead>
@@ -23,9 +23,9 @@
                     {
                         <tr>
                             <td>@book.Id</td>
-                            <td>@book.Author</td>
                             <td>@book.Title</td>
-                            <td>@book.Year</td>
+                            <td>@book.Author</td>
+                            <td>@book.PublishingDate</td>
                             <td><a asp-controller="Home" asp-action="Book" asp-route-id="@book.Id" class="btn btn-warning">Edytuj</a></td>
                             <td><a asp-controller="Books" asp-action="Remove" asp-route-id="@book.Id" class="btn btn-danger">Usuń</a></td>
                         </tr>
