@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteka.Models\Biblioteka.Models.csproj" />
+    <ProjectReference Include="..\Biblioteka.Repository\Biblioteka.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

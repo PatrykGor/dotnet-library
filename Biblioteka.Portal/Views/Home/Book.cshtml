@@ -3,23 +3,26 @@ ViewData["Title"] = "Książka";
 }
 
 <div class="container mt-5">
-    <form asp-action="@ViewData["Action"]" asp-controller="Books" method="post">
-        @if(ViewData["Id"] != null){
-        <input type="hidden" name="Id" value="@ViewData["Id"]">
+    <form asp-action="@ViewData["Action"]" asp-controller="@ViewData["Controller"]" method="post">
+        @if(ViewBag.Book != null)
+        {
+            <input type="hidden" name="Id" value="@ViewBag.Book.Id">
         }
         <div class="form-group">
-            <input type="text" class="form-control" id="Title" name="Title" placeholder="Tytuł" value="@ViewData["BookTitle"]">
+            <input type="text" class="form-control" id="Title" name="Title" placeholder="Tytuł" value="@if (ViewBag.Book != null) @ViewBag.Book.Title">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" id="Author" name="Author" placeholder="Autor" value="@ViewData["Author"]">
+            <input type="text" class="form-control" id="Author" name="Author" placeholder="Autor" value="@if (ViewBag.Book != null) @ViewBag.Book.Author">
         </div>
         <div class="form-group">
-            <input type="date" class="form-control" id="PublishingDate" name="PublishingDate" placeholder="Data wydania" value="@ViewData["Date"]">
+            <label> Data wydania:
+            <input type="date" class="form-control" id="PublishingDate" name="PublishingDate" placeholder="Data wydania" value="@if (ViewBag.Book != null) @ViewBag.Book.PublishingDate.ToString("yyyy-MM-dd")">
+            </label>
         </div>
-        @if (ViewData["Error"] != null)
+        @if (TempData["Message"] != null)
         {
-            <div class="alert alert-danger" role="alert">
-                @ViewData["Error"]
+            <div class="alert alert-@TempData["MessageType"]" role="alert">
+                @TempData["Message"]
             </div>
         }
         <div class="form-group">

@@ -9,7 +9,7 @@ namespace Biblioteka.Models.EntityMapper
         {
             builder.HasKey(x => x.Id)
                 .HasName("pk_userId");
-            builder.HasIndex(x => x.UserName)
+            builder.HasIndex(x => x.Username)
                 .IsUnique();
             builder.HasIndex(x => x.PasswordSalt)
                 .IsUnique();
@@ -17,7 +17,7 @@ namespace Biblioteka.Models.EntityMapper
             builder.Property(x => x.Id).ValueGeneratedOnAdd()
                 .HasColumnName("id")
                    .HasColumnType("INT");
-            builder.Property(x => x.UserName)
+            builder.Property(x => x.Username)
                 .HasColumnName("username")
                    .HasColumnType("NVARCHAR(100)")
                    .IsRequired();

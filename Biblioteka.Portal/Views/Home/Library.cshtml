@@ -2,12 +2,12 @@
     ViewData["Title"] = "Biblioteka";
 }
 <div class="container mt-5">
-    <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex mb-4">
         <a asp-controller="Home" asp-action="Book" asp-route-search="false" class="btn btn-success">Dodaj</a>
-        <a asp-controller="Home" asp-action="Book" asp-route-search="true" class="btn btn-info">Znajdź</a>
-        <a asp-controller="Home" asp-action="Library"class="btn btn-link">Wyczyść wyszukiwanie</a>
+        <a asp-controller="Home" asp-action="Book" asp-route-search="true" class="ml-2 btn btn-info">Znajdź</a>
+        <a asp-controller="Home" asp-action="Library"class="ml-auto btn btn-link">Wyczyść wyszukiwanie</a>
     </div>
-    <table class="w-100">
+    <table class="table table-striped w-100">
         <thead>
             <th>Id</th>
             <th>Tytuł</th>
@@ -25,7 +25,7 @@
                             <td>@book.Id</td>
                             <td>@book.Title</td>
                             <td>@book.Author</td>
-                            <td>@book.PublishingDate</td>
+                            <td>@book.PublishingDate.ToShortDateString()</td>
                             <td><a asp-controller="Home" asp-action="Book" asp-route-id="@book.Id" class="btn btn-warning">Edytuj</a></td>
                             <td><a asp-controller="Books" asp-action="Remove" asp-route-id="@book.Id" class="btn btn-danger">Usuń</a></td>
                         </tr>
@@ -34,4 +34,10 @@
             }
         </tbody>
     </table>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-@TempData["MessageType"]" role="alert">
+            @TempData["Message"]
+        </div>
+    }
 </div>

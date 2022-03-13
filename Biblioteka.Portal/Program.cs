@@ -21,6 +21,10 @@ namespace Biblioteka.Portal
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureLogging(o => {
+                        o.ClearProviders();
+                        o.AddConsole();
+                    });
                 });
     }
 }

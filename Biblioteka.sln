@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.6.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka.Models", "Biblioteka.Models\Biblioteka.Models.csproj", "{E3CC45BA-EE5B-42BC-9B24-07B5BA4BC88E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteka.Models", "Biblioteka.Models\Biblioteka.Models.csproj", "{E3CC45BA-EE5B-42BC-9B24-07B5BA4BC88E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka.Repository", "Biblioteka.Repository\Biblioteka.Repository.csproj", "{F15B6A28-4F41-4226-AD86-907C4BC57CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteka.Repository", "Biblioteka.Repository\Biblioteka.Repository.csproj", "{F15B6A28-4F41-4226-AD86-907C4BC57CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka.Service", "Biblioteka.Service\Biblioteka.Service.csproj", "{546A7A49-4201-4AED-A2AC-9AE1F60C12B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteka.Services", "Biblioteka.Service\Biblioteka.Services.csproj", "{546A7A49-4201-4AED-A2AC-9AE1F60C12B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka.API", "Biblioteka.API\Biblioteka.API.csproj", "{8D407E17-4701-4507-A276-665B426C04B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteka.API", "Biblioteka.API\Biblioteka.API.csproj", "{8D407E17-4701-4507-A276-665B426C04B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka.Portal", "Biblioteka.Portal\Biblioteka.Portal.csproj", "{CA63A884-06FD-45B2-9039-413FF65CA180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteka.Portal", "Biblioteka.Portal\Biblioteka.Portal.csproj", "{CA63A884-06FD-45B2-9039-413FF65CA180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E3CC45BA-EE5B-42BC-9B24-07B5BA4BC88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +83,11 @@ Global
 		{CA63A884-06FD-45B2-9039-413FF65CA180}.Release|x64.Build.0 = Release|Any CPU
 		{CA63A884-06FD-45B2-9039-413FF65CA180}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA63A884-06FD-45B2-9039-413FF65CA180}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0E95AB7-F470-41C6-8DA8-D06502A722CB}
 	EndGlobalSection
 EndGlobal
